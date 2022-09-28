@@ -1,0 +1,12 @@
+apiVersion: extensions.istio.io/v1alpha1
+kind: WasmPlugin
+metadata:
+  name: maritz-wasmplugin
+  namespace: profiles
+spec:
+  selector:
+    matchLabels:
+      app: profile
+  pluginName: maritz-wasmplugin
+  url: https://storage.googleapis.com/maritz-plugins/maritz-wasmplugin.wasm
+  imagePullPolicy: Always
